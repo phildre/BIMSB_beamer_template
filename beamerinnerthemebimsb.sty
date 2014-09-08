@@ -1,0 +1,45 @@
+\mode<presentation>
+
+\definecolor{hmblue}{RGB}{0,88,156}
+\definecolor{hmdarkblue}{RGB}{0,62,110}
+\definecolor{hmdlightblue}{RGB}{0,162,224}
+\definecolor{hmred}{RGB}{212,45,18}
+\definecolor{hmorange}{RGB}{207,104,0}
+\definecolor{hmdarkgrey}{RGB}{81,81,81}
+\definecolor{hmgrey}{RGB}{156,156,156}
+\definecolor{hmlightgrey}{RGB}{185,185,185}
+
+
+
+
+\defbeamertemplate*{title page}{bimsb}[1][]
+{%
+   \vskip-0.25cm%
+    \begin{beamercolorbox}[wd=\paperwidth,ht=0.52\paperheight,leftskip=1cm,sep=8pt,#1,left]{title
+page header}%
+      \usebeamerfont{title}\inserttitle%
+%      \usebeamerfont{title}\inserttitle\par%
+    \end{beamercolorbox}%
+    \vskip0.75cm%
+    \begin{beamercolorbox}[wd=12cm,leftskip=1cm,#1, left]{author}%
+      \usebeamerfont{author}{\bf \insertauthor}%
+    \end{beamercolorbox}%
+     \vskip0.2cm%
+    \begin{beamercolorbox}[wd=12cm,leftskip=1cm,#1,left]{date}
+      \usebeamerfont{author}\insertinstitute%
+    \end{beamercolorbox}%
+ \vspace*{-0.2cm}%
+ \begin{figure}[ht]\hspace*{-0.6cm}%
+ \includegraphics[height=0.095\textwidth]{BIMSB/LOGO_BIMSB.jpg}\hspace*{4.9cm}~%
+ \vspace*{5cm}\includegraphics[height=0.12\textwidth]{BIMSB/HG_LOGO_S_ENG_RGB.jpg}
+\end{figure}
+ \vfill
+}
+
+
+
+
+
+
+\mode
+<all>
