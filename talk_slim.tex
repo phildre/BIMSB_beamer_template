@@ -1,0 +1,88 @@
+\documentclass[12pt,t]{beamer}
+\usepackage{beamerthemesplit,marvosym}
+
+
+% Theme
+\usetheme{bimsbslim}
+
+\usepackage{etex}
+\usepackage{tabularx,tabulary}
+\usepackage{color,colordvi}
+\usepackage{booktabs}
+\usepackage{subfigure}
+\usepackage{graphicx}
+\usepackage{color,colordvi}
+\usepackage{algorithmicx}
+
+
+% Fonts
+\usepackage{helvet}
+\usepackage{ccfonts}     % Font family: Concrete Math
+\usepackage[T1]{fontenc} % Font encoding: T1
+
+
+\usepackage[absolute,overlay]{textpos}
+\setlength{\TPHorizModule}{1cm} % Horizontal units
+\setlength{\TPVertModule}{1cm} % Vertical units
+
+
+\setbeamertemplate{navigation symbols}{}
+\setbeamercovered{dynamic}
+
+\usepackage[square, sort, numbers, authoryear]{natbib}
+\bibliographystyle{plainnat}
+\definecolor{dot_red1}{RGB}{255, 51, 51}
+\definecolor{dot_green1}{RGB}{0, 153, 102}
+\definecolor{region1}{RGB}{255, 153, 0}
+\definecolor{region2}{RGB}{255, 102, 0}
+\definecolor{region3}{RGB}{255, 0, 0}
+\definecolor{region4}{RGB}{153, 0, 0}
+ 
+\author[John Doe]{John Doe} 
+\institute[BIMSB]{Berlin Institute for Medical Systems Biology\\Max Delbr\"{u}ck Center for
+Molecular Medicine, Berlin}%
+\date[BIMSB, Sept 20]{BIMSB, Sept 20}
+\title[Talk Title]{Talk Title}
+
+\begin{document}
+
+\begin{frame}
+\titlepage
+\end{frame}
+
+\setcounter{framenumber}{0} % title page not included in counting
+   
+
+% Begin presentation
+
+
+\begin{frame}
+\frametitle{Slide title } 
+
+Some text 
+
+\end{frame}
+
+
+\begin{frame}
+\frametitle{Slide title with p} 
+
+Some text 
+
+\end{frame}
+
+
+\begin{frame}
+\frametitle{Slide title} 
+\framesubtitle{Slide sub-title} 
+
+Some text 
+
+\end{frame}
+
+	
+
+
+\end{document}
+
+

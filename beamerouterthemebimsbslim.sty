@@ -1,0 +1,66 @@
+\mode<presentation>
+
+
+\definecolor{hmblue}{RGB}{0,88,156}
+\definecolor{hmdarkblue}{RGB}{0,62,110}
+\definecolor{hmdlightblue}{RGB}{0,162,224}
+\definecolor{hmred}{RGB}{212,45,18}
+\definecolor{hmorange}{RGB}{207,104,0}
+\definecolor{hmdarkgrey}{RGB}{81,81,81}
+\definecolor{hmgrey}{RGB}{156,156,156}
+\definecolor{hmlightgrey}{RGB}{185,185,185}
+
+
+% Frame title
+\defbeamertemplate*{frametitle}{bimsbslim}[1][]
+{
+%\vskip0.3cm%
+  \ifx\insertframesubtitle\@empty%
+  	{\begin{beamercolorbox}[wd=\paperwidth,ht=0.7cm]{frametitle} %
+  	\begin{tikzpicture}
+ 	\useasboundingbox[fill=white](0,0) rectangle(\the\paperwidth,0.7); %
+  	\fill[hmblue] (0,0) rectangle(\the\paperwidth,0.7); %
+   	\node[anchor=west, white,font=\large] at (0.7,0.30){\insertframetitle}; %
+   	\end{tikzpicture} %
+   	\end{beamercolorbox}}
+  \else%
+    {\begin{beamercolorbox}[wd=\paperwidth,ht=0.95cm]{frametitle} %
+  	\begin{tikzpicture}
+  	\useasboundingbox[fill=white](0,0) rectangle(\the\paperwidth,1.0); %
+  	\fill[hmblue] (0,0) rectangle(\the\paperwidth,1.0); %
+    \node[anchor= west, white,font=\large] at (0.7,0.67){\insertframetitle};%
+    \node[anchor= west, white,font=\small] at (0.72,0.29){\insertframesubtitle};%
+    \end{tikzpicture}
+  	\end{beamercolorbox}}
+  \fi
+}
+
+% footer styling
+\setbeamercolor{section in footer}{fg=white,bg=hmorange}
+\setbeamercolor{subsection in footer}{fg=white,bg=hmdarkblue}
+\setbeamercolor{pagenumber in footer}{fg=white,bg=hmblue}
+
+\defbeamertemplate*{footline}{bimsbslim}
+{
+    \ifnum \insertpagenumber=1
+	\leavevmode%
+	\hbox{%
+	\begin{beamercolorbox}[wd=\paperwidth,ht=2.25ex,dp=1ex,center]{}%
+	    % empty environment to raise height
+	\end{beamercolorbox}}%
+	\vskip0pt%
+    \else
+	\leavevmode%
+	\hbox{%
+	\begin{beamercolorbox}[wd=0.25\paperwidth,ht=2.25ex,dp=1ex,center]{section in footer}%
+	    \insertshortauthor~~(\insertshortinstitute)
+	\end{beamercolorbox}%
+	\begin{beamercolorbox}[wd=.5\paperwidth,ht=2.25ex,dp=1ex,center]{subsection in footer}%
+	    \insertshorttitle
+	\end{beamercolorbox}%
+	\begin{beamercolorbox}[wd=.25\paperwidth,ht=2.25ex,dp=1ex,center]{pagenumber in footer}%
+	\insertframenumber{} \hspace*{2ex} 
+	\end{beamercolorbox}}%
+	\vskip0pt%
+    \fi
+}
